@@ -1,3 +1,10 @@
+summary of whats going:
+basically I did some research on how to connect my git hub account to my ide so i can more quickly and conveniently do version control, this is the result. it was fairly straght forward after authentication. this is the same as the repository "food-app-udemy" because in my filesystem it was named something differently it ended up i ould only create a new repository and ot synchronize with a pre existing repository. still looking how to do that.
+
+
+
+
+
 # MyFirstApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
