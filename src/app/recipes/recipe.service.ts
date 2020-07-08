@@ -7,6 +7,7 @@ import { ShoppingListService } from "../shopping-list/shopping-list.service";
 })
 export class RecipeService {
 //slakjsdlkfjalkfj
+//////slkjflskj
   //public property for event EventEmitter
   recipeSelected = new EventEmitter<Recipe>();
 
