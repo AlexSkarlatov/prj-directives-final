@@ -25,3 +25,18 @@ const appRoutes: Routes = [
  { path: 'shoppinglist', component: ShoppingListComponent},
  { path: '**', redirectTo: ''},
 ];
+/// merge this guy with the primary routing branch
+
+@NgModule({
+    //below is a very important to import the routerModule and use it to assign
+    //my local path array to the routerModule, then I exprot this in the exports
+    //array of the ngmodule annotation
+    imports: [
+      RouterModule.forRoot(appRoutes)
+    ],
+    exports: [RouterModule]
+})
+export class AppRoutingModule {
+  //this name above is snet to the app.module.ts file where the  where
+  //where it may take advantage of the routerModule object and the Routes object
+}
