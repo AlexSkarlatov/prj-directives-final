@@ -18,7 +18,10 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 
 //step 3 is define the Routes
 // a route entry takes the form of
-// {}
+// {pathField: 'path/value/:isrequired', component(field): componentValueToBeDisplayedAtThisCurrentPath}
 const appRoutes: Routes = [
-
+ { path: '', component: HeaderComponent},
+ { path: 'recipes', component: RecipesComponent},
+ { path: 'shoppinglist', component: ShoppingListComponent},
+ { path: '**', redirectTo: ''},
 ];
