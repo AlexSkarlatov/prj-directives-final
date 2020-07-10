@@ -20,10 +20,10 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 // a route entry takes the form of
 // {pathField: 'path/value/:isrequired', component(field): componentValueToBeDisplayedAtThisCurrentPath}
 const appRoutes: Routes = [
- { path: '', component: HeaderComponent},
+ { path: '', redirectTo: '/recipes', pathMatch: 'full'},
  { path: 'recipes', component: RecipesComponent},
- { path: 'shoppinglist', component: ShoppingListComponent},
- { path: '**', redirectTo: ''},
+ { path: 'shopping-list', component: ShoppingListComponent},
+ { path: '**', redirectTo: '/recipes'},
 ];
 /// merge this guy with the primary routing branch
 
