@@ -10,6 +10,9 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+
 //step 2 is to  import all of the components you will be using in the <router-module> tag
 
 
@@ -21,7 +24,10 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 // {pathField: 'path/value/:isrequired', component(field): componentValueToBeDisplayedAtThisCurrentPath}
 const appRoutes: Routes = [
  { path: '', redirectTo: '/recipes', pathMatch: 'full'},
- { path: 'recipes', component: RecipesComponent},
+ { path: 'recipes', component: RecipesComponent, children: [
+   { path: '', component: RecipeStartComponent },
+   { path: ':id', component: RecipeDetailComponent}
+ ]},
  { path: 'shopping-list', component: ShoppingListComponent},
  { path: '**', redirectTo: '/recipes'},
 ];
