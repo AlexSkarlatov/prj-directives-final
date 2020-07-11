@@ -13,6 +13,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
+
+import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component";
 //step 2 is to  import all of the components you will be using in the <router-module> tag
 
 
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
  { path: '', redirectTo: '/recipes', pathMatch: 'full'},
  { path: 'recipes', component: RecipesComponent, children: [
    { path: '', component: RecipeStartComponent },
-   { path: ':id', component: RecipeDetailComponent}
+   { path: ':id', component: RecipeDetailComponent },
+   { path: 'new', component: RecipeEditComponent }
  ]},
  { path: 'shopping-list', component: ShoppingListComponent},
  { path: '**', redirectTo: '/recipes'},
