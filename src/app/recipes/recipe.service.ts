@@ -7,6 +7,7 @@ import { ShoppingListService } from "../shopping-list/shopping-list.service";
 })
 export class RecipeService {
 //slakjsdlkfjalkfj
+//////slkjflskj
   //public property for event EventEmitter
   recipeSelected = new EventEmitter<Recipe>();
 
@@ -30,6 +31,10 @@ export class RecipeService {
    )
   ];
   constructor(private slService: ShoppingListService) { }
+
+  getRecipe(index: number){
+    return this.recipes[index];
+  }
 
 
   addIngredientsToShoppingList(ings: Ingredient[]){

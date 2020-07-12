@@ -5,9 +5,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  @Output() featureSelectedEvent = new EventEmitter<string>();
 
-  onSelect(feature: string) {
-    this.featureSelectedEvent.emit(feature);
-  }
+
+
+  // @Output() featureSelectedEvent = new EventEmitter<string>();
+  //
+  // onSelect(feature: string) {
+  //   this.featureSelectedEvent.emit(feature);
+  // }
 }
